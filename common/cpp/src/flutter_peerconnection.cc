@@ -736,6 +736,7 @@ scoped_refptr<RTCRtpParameters> FlutterPeerConnection::updateRtpParameters(
       encoding++;
     }
   }
+  parameters->set_encodings(params);
 
   EncodableValue value =
       findEncodableValue(newParameters, "degradationPreference");
